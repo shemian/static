@@ -1,8 +1,12 @@
-#import os and Markdown modules
+#import os , json and Markdown modules
 import os
 import markdown2
+import json
 
-folder_path = './markdowns' # Setting the `folder_path` to './markdowns'
+with open('config.json') as configuration_file:
+    config = json.load(configuration_file)
+
+folder_path = config['folder_path'] 
 
 def convert_md_to_html(folder_path):
     for filename in os.listdir(folder_path): #loop through all the files as specified by `folder_path`
