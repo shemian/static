@@ -1,14 +1,25 @@
 # STATIC SITE GENERATOR
-A simple Python script to convert markdown files to HTML files. 
-The script takes a folder path as an input and converts all the files with ".md" extension in that folder to HTML files.
+This is a simple Python script that converts Markdown files to HTML files.
+The script is designed to be flexible and configurable, allowing you to specify the folder where your Markdown files are located and automatically converting them to HTML files.
 
 ## Requirements 
 Python 3 
 Markdown2 module 
+json
+
+## Configuration
+The script reads a configuration file in JSON format to specify the folder where your Markdown files are located. The file should contain a single JSON object with the following structure: 
+`
+{
+    "folder_path": "./markdowns"
+}
+`
+Replace ./markdowns with the path to the folder where your Markdown files are located.
+
 
 # Usage
 1. Download or clone the repository to your Machine.
-2. Make sure 'markdwon2` module is installed as well by running `pip install markdwon2`.
+2. Make sure 'markdwon2  `module is installed as well by running` pip install markdwon2`.
 2. Navigate to the repository where the project is stored.
 3. Run `script.py` to start the program. 
 
@@ -44,3 +55,26 @@ $ pip install -r requirements.txt
 
 
 Note: If you've installed Python 3 using a method other than Homebrew, you might need to type python in the second command instead of python3.
+
+## Error Handling 
+The Script also  includes error andling for the following scenarios:
+` 
+. Missing configuration file
+. Invalid JSON format in configuration file
+. Missing Markdown files
+. Other errors that may occur during the conversion process
+
+`
+In the event of an error, a descriptive error message will be displayed in the terminal or command prompt.
+
+## Output 
+For each Markdown file, a corresponding HTML file will be created in the same folder with the same name and a `.html` extension. For example, a Markdown file named `example.md` will be converted to an HTML file named `example.html`.
+
+## Notes 
+The script uses the `markdown2` library to convert the Mardowns to HTML 
+The script only converts files with a `.md` extension. Other files in the folder will be ignored.
+
+
+
+## Contributions
+If you find a bug or would like to suggest a feature, please create a new issue or pull request. Your contributions are greatly appreciated!
