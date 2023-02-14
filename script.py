@@ -16,7 +16,7 @@ def read_config(config_file): # Reads the Configuration File and returns the dic
         return None
 
 
-def convert_md_to_html(folder_path):
+def convert_md_to_html(folder_path, image_path):
     for filename in os.listdir(folder_path): #loop through all the files as specified by `folder_path`
         if filename.endswith('.md'): # check if the file ends with an `.md` , then convert it to HTML
             file_path = os.path.join(folder_path, filename)
@@ -25,13 +25,19 @@ def convert_md_to_html(folder_path):
                     markdown_text = file.read() 
                     html = markdown2.markdown(markdown_text) #the markdown library converts the md file to HTML
                     html_filename = filename.replace('.md', '.html') #Replace the .md expension with the .html to get the html files
-                    html_file_path = os.path.join(folder_path, html_filename)# Constructing the full HTML file path by joining the `folder_path` and `html_filename`
+                    html_file_path = os.path.join(folder_path, html_filename) # Constructing the full HTML file path by joining the `folder_path` and `html_filename`
+                    #create a list of image paths
+                    image_list = []
+                    for file in os.listdir(image_path):
+                        if file.endswith(('.png', '.jpg', '.jpeg')):
+                            image_list.append(os.path.join(image_path, file))
+
                     with open(html_file_path, 'w') as html_file: #open the HTMl file in write Mode
-                        html_file.write(html)
+                        html_file.write(html.format(image_list=image_list))
                         print(f'Converted {filename} to {html_filename}')
 
             except FileNotFoundError:
-                 print(f'Error: Markdown file {file_path} not found.')
+                 print(f'Error: Markdown file {file_path} not found. Please make sure the file exists before running the script.')
             except Exception as error:
                 print(f'Error converting file {filename}: {error}')
 
@@ -41,8 +47,10 @@ def main():
 
     if config:
         folder_path = config['folder_path']
+        image_path = config['image_path']
+        
         if os.path.isdir(folder_path):
-            convert_md_to_html(folder_path)
+            convert_md_to_html(folder_path, image_path)
 
         else:
             print(f'Error: Folder {folder_path} not found.')
