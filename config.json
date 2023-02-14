@@ -1,3 +1,4 @@
 {
-    "folder_path": "./markdowns"
+    "folder_path": "./markdowns",
+    "image_path": "./assets/images"
 }
