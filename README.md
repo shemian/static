@@ -21,7 +21,9 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 
 # Usage
 1. Download or clone the repository to your Machine.
-    git clone https://github.com/shemian/static.git
+
+        git clone https://github.com/shemian/static.git
+
 2. Make sure 'markdwon2  `module is installed as well by running` pip install markdwon2`.
 2. Navigate to the repository where the project is stored.
 3. Run `script.py` to start the program. 
