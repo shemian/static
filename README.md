@@ -43,14 +43,14 @@ Note: If you've installed Python 3 using a method other than Homebrew, you might
 ## Configuration
 The application reads a configuration file config.json to determine the paths to the input markdown files, images, and templates. Here's an example config.json file
 
-    `
+    
     {
     "folder_path": "./markdowns",
     "image_path": "./assets/images",
     "template_path": "./templates"
     }
 
-    `
+    
 
 * `folder_path` : specifies the path to the folder containing the input markdown files.
 * `image_path` : specifies the path to the folder containing any images used in the markdown files.
@@ -77,13 +77,20 @@ The Script also  includes error andling for the following scenarios:
 In the event of an error, a descriptive error message will be displayed in the terminal or command prompt.
 
 ## Output 
-For each Markdown file, a corresponding HTML file will be created in the same folder with the same name and a `.html` extension. For example, a Markdown file named `example.md` will be converted to an HTML file named `example.html`.
+For each Markdown file, a corresponding HTML file will be created and stored in the `templates` folder with the same name and a `.html` extension. For example, a Markdown file named `example.md` will be converted to an HTML file named `example.html`.
+
+
 
 ## Notes 
 The script uses the `markdown2` library to convert the Mardowns to HTML 
 The script only converts files with a `.md` extension. Other files in the folder will be ignored.
-The template for this project is available on `https://startbootstrap.com/themes/blog-news` 
+
+# Credits
+The template at `https://startbootstrap.com/themes/blog-news` was used for this project.
 
 
 ## Contributions
 If you find a bug or would like to suggest a feature, please create a new issue or pull request. Your contributions are greatly appreciated!
+
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
