@@ -6,6 +6,7 @@ The script is designed to be flexible and configurable, allowing you to specify 
 Python 3 
 Markdown2 module 
 json
+jinja2 module
 
 ## Configuration
 The script reads a configuration file in JSON format to specify the folder where your Markdown files are located. The file should contain a single JSON object with the following structure: 
@@ -73,7 +74,7 @@ For each Markdown file, a corresponding HTML file will be created in the same fo
 ## Notes 
 The script uses the `markdown2` library to convert the Mardowns to HTML 
 The script only converts files with a `.md` extension. Other files in the folder will be ignored.
-
+The template for this project is available on `https://startbootstrap.com/themes/blog-news` 
 
 
 ## Contributions
