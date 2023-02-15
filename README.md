@@ -27,7 +27,12 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 2. Navigate to the project folder then  activate the virtual Envrionment 
     
     In Windows Run:
-    source env/Scripts/activate
+
+        source env/Scripts/activate
+
+    In MacOs Run:
+         
+        source env/bin/activate
 
 
 2. Make sure markdwon2 and Jinja2 module are installed.
