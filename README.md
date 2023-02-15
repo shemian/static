@@ -35,48 +35,23 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
         source env/bin/activate
 
 
-2. Make sure markdwon2 and Jinja2 module are installed.
+3. Make sure markdown2 and Jinja2 module are installed.
         
         pip install markdown2 Jinja2 
 
-2. Navigate to the repository where the project is stored.
 
-3. Run `script.py` to start the program.
+
+4. Run `script.py` to start the program.
 
         python3 script.py
 
-Once you have the requirements installed, you can run the script as follows:
-
-## Windows 
-1. Download or clone the repository to your local machine.
-2. Open the Command Prompt and navigate to the directory where the script is located.
-3. Run the following command to convert the markdown files in the `markdowns` directory to HTML files:
-`python3 script.py`.
-Note: Replace the  'project-root' with the path to the root folder of the project.
-
-
-> cd 'project-root' 
-> python3 venv env  //install the virtual env.
-> python3 -m pip install --user virtualenv // if the first one fails.
-> env\Scripts\activate //activate the virtual environment.
-
-Run `python3 script.py`.
-
-## MacOS
-1. Download or clone the repository to your local machine.
-2. Open the Command Prompt and navigate to the directory where the script is located.
-3. Run the following command to convert the markdown files in the `markdowns` directory to HTML files:
-`python3 script.py`.
-Note: Replace the  'project-root' with the path to the root folder of the project.
-
-$ cd 'project-root'
-$ python3 -m venv env
-$ source env/bin/activate
-$ pip install -r requirements.txt
-
-
 
 Note: If you've installed Python 3 using a method other than Homebrew, you might need to type python in the second command instead of python3.
+
+## File Structure 
+* `markdowns` : This directory contain the markdown files
+
+* `template` : This directory contains the HTML files and the `base.html` file where the o
 
 ## Error Handling 
 The Script also  includes error andling for the following scenarios:
