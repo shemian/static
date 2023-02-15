@@ -9,15 +9,6 @@ This are the requirements for running the Static Site Generator
 * json
 * jinja2 module
 
-## Configuration
-The script reads a configuration file in JSON format to specify the folder where your Markdown files are located. The file should contain a single JSON object with the following structure: 
-`
-{
-    "folder_path": "./markdowns"
-}
-`
-Replace ./markdowns with the path to the folder where your Markdown files are located.
-
 
 # Usage
 1. Download or clone the repository to your Machine.
@@ -48,10 +39,31 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 
 Note: If you've installed Python 3 using a method other than Homebrew, you might need to type python in the second command instead of python3.
 
-## File Structure 
-* `markdowns` : This directory contain the markdown files
 
-* `template` : This directory contains the HTML files and the `base.html` file where the o
+## Configuration
+The application reads a configuration file config.json to determine the paths to the input markdown files, images, and templates. Here's an example config.json file
+
+    `
+    {
+    "folder_path": "./markdowns",
+    "image_path": "./assets/images",
+    "template_path": "./templates"
+    }
+
+    `
+
+* `folder_path` : specifies the path to the folder containing the input markdown files.
+* `image_path` : specifies the path to the folder containing any images used in the markdown files.
+* `template_path`:  specifies the path to the folder containing the Jinja2 templates.
+
+`Note` :Make sure to update the paths in config.json to match the paths on your local machine.
+
+## File Structure 
+* `markdowns` : This directory contain the markdown files.
+
+* `templates` : This directory contains the HTML files.
+
+* `templates/base.html` : This is the main html file that the other generated .html files inherit from 
 
 ## Error Handling 
 The Script also  includes error andling for the following scenarios:
