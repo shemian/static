@@ -24,6 +24,12 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 
         git clone https://github.com/shemian/static.git
 
+2. Navigate to the project folder then  activate the virtual Envrionment 
+    
+    In Windows Run:
+    source env/Scripts/activate
+
+
 2. Make sure markdwon2 and Jinja2 module are installed.
         
         pip install markdown2 Jinja2 
