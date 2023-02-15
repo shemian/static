@@ -31,6 +31,7 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 2. Navigate to the repository where the project is stored.
 
 3. Run `script.py` to start the program.
+
         python3 script.py
 
 Once you have the requirements installed, you can run the script as follows:
