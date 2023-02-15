@@ -3,10 +3,11 @@ This is a simple Python script that converts Markdown files to HTML files.
 The script is designed to be flexible and configurable, allowing you to specify the folder where your Markdown files are located and automatically converting them to HTML files.
 
 ## Requirements 
-Python 3 
-Markdown2 module 
-json
-jinja2 module
+This are the requirements for running the Static Site Generator 
+* Python 3 
+* Markdown2 module 
+* json
+* jinja2 module
 
 ## Configuration
 The script reads a configuration file in JSON format to specify the folder where your Markdown files are located. The file should contain a single JSON object with the following structure: 
@@ -20,6 +21,7 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 
 # Usage
 1. Download or clone the repository to your Machine.
+    git clone https://github.com/shemian/static.git
 2. Make sure 'markdwon2  `module is installed as well by running` pip install markdwon2`.
 2. Navigate to the repository where the project is stored.
 3. Run `script.py` to start the program. 
