@@ -1,4 +1,5 @@
 {
     "folder_path": "./markdowns",
-    "image_path": "./assets/images"
+    "image_path": "./assets/images",
+    "template_path": "./templates"
 }
