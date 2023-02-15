@@ -24,9 +24,14 @@ Replace ./markdowns with the path to the folder where your Markdown files are lo
 
         git clone https://github.com/shemian/static.git
 
-2. Make sure 'markdwon2  `module is installed as well by running` pip install markdwon2`.
+2. Make sure markdwon2 and Jinja2 module are installed.
+        
+        pip install markdown2 Jinja2 
+
 2. Navigate to the repository where the project is stored.
-3. Run `script.py` to start the program. 
+
+3. Run `script.py` to start the program.
+        python3 script.py
 
 Once you have the requirements installed, you can run the script as follows:
 
