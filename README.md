@@ -13,8 +13,8 @@ This are the requirements for running the Static Site Generator
 # Usage
 1. Download or clone the repository to your Machine.
 
-        git clone https://github.com/shemian/static.git
-
+        git clone https://github.com/shemian/static-site-generator.git
+        
 2. Navigate to the project folder then  activate the virtual Envrionment 
     
     In Windows Run:
