@@ -70,7 +70,7 @@ The application reads a configuration file config.json to determine the paths to
 
 * The start the program by running 
      
-     python3 script.py
+         python3 script.py
 
 * corresponding HTML file will be created and stored in the `templates` folder with the same name and a `.html` extension. For example, a Markdown file named `example.md` will be converted to an HTML file named `example.html`.
 
