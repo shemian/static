@@ -65,6 +65,33 @@ The application reads a configuration file config.json to determine the paths to
 
 * `templates/base.html` : This is the main html file that the other generated .html files inherit from 
 
+## Creating Content
+* To create new content and add it to the site, Create a new markdown file in the `markdowns` directory for instance `example.md` 
+
+* The start the program by running 
+     
+     python3 script.py
+
+* corresponding HTML file will be created and stored in the `templates` folder with the same name and a `.html` extension. For example, a Markdown file named `example.md` will be converted to an HTML file named `example.html`.
+
+* Navigate to the `templates` folder and include the file you have created in the `base.html` for instance in the navigation bar 
+        
+        <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="container">
+                <a class="navbar-brand" href="base.html">Staic Site Generator</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="base.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="example.html">Example Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+         
+
+
 ## Error Handling 
 The Script also  includes error andling for the following scenarios:
 ` 
@@ -75,11 +102,6 @@ The Script also  includes error andling for the following scenarios:
 
 `
 In the event of an error, a descriptive error message will be displayed in the terminal or command prompt.
-
-## Output 
-For each Markdown file, a corresponding HTML file will be created and stored in the `templates` folder with the same name and a `.html` extension. For example, a Markdown file named `example.md` will be converted to an HTML file named `example.html`.
-
-
 
 ## Notes 
 The script uses the `markdown2` library to convert the Mardowns to HTML 
